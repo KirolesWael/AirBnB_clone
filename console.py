@@ -92,7 +92,7 @@ class HBNBCommand(cmd.Cmd):
             print('(hbnb) ', end='')
         return stop
 
-    def quit(self, command):
+    def do_quit(self, command):
         """ Method to exit the HBNB console"""
         exit()
 
@@ -100,7 +100,7 @@ class HBNBCommand(cmd.Cmd):
         """ Prints the help documentation for quit  """
         print("Exits the program with formatting\n")
 
-    def EOF(self, arg):
+    def do_EOF(self, arg):
         """ Handles EOF to exit program """
         print()
         exit()
@@ -113,7 +113,7 @@ class HBNBCommand(cmd.Cmd):
         """ Overrides the emptyline method of CMD """
         pass
 
-    def create(self, args):
+    def do_create(self, args):
         """ Create an object of any class"""
         if not args:
             print("** class name missing **")
@@ -131,7 +131,7 @@ class HBNBCommand(cmd.Cmd):
         print("Creates a class of any type")
         print("[Usage]: create <className>\n")
 
-    def show(self, args):
+    def do_show(self, args):
         """ Method to show an individual object """
         new = args.partition(" ")
         c_name = new[0]
@@ -197,7 +197,7 @@ class HBNBCommand(cmd.Cmd):
         print("Destroys an individual instance of a class")
         print("[Usage]: destroy <className> <objectId>\n")
 
-    def all(self, args):
+    def do_all(self, args):
         """ Shows all objects, or all objects of a class"""
         print_list = []
 
@@ -220,7 +220,7 @@ class HBNBCommand(cmd.Cmd):
         print("Shows all objects, or all of a class")
         print("[Usage]: all <className>\n")
 
-    def count(self, args):
+    def do_count(self, args):
         """Count current number of class instances"""
         count = 0
         for k, v in storage._FileStorage__objects.items():
@@ -232,7 +232,7 @@ class HBNBCommand(cmd.Cmd):
         """ """
         print("Usage: count <class_name>")
 
-    def update(self, args):
+    def do_update(self, args):
         """ Updates a certain object with new info """
         c_name = c_id = att_name = att_val = kwargs = ''
 
