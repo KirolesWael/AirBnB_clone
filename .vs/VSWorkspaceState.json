@@ -2,8 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\models",
-    "\\models\\engine"
+    "\\models\\engine",
+    "\\web_static",
+    "\\web_static\\styles"
   ],
-  "SelectedNode": "\\console.py",
+  "SelectedNode": "\\web_static\\styles\\8-places.css",
   "PreviewInSolutionExplorer": false
 }
